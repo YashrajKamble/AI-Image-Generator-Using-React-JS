@@ -18,8 +18,8 @@ function ImageGenerator() {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer sk-proj-YKwkZi3rUsnK3zFU4SAlT3BlbkFJfGXIb4Y6FJsr5D94ISrH",
-          "User-Agent": "chrome",
+            "Bearer sk-None-H6oanCAddvQxgBBwHs7TT3BlbkFJyYqw060G5dfa8sFS4fsC",
+          "User-Agent": "Chrome",
         },
         body: JSON.stringify({
           prompt: `${inputRef.current.value}`,
