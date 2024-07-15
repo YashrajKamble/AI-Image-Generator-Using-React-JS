@@ -8,9 +8,29 @@ function ImageGenerator() {
   let inputRef = useRef(null);
 
   const imageGenerator = async () => {
-    if (inputRef.current.value === "") return 0;
+    if (inputRef.current.value === "") {
+      return 0;
+    }
+    const response = await fetch(
+      "https://api.openai.com/v1/images/generations",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization:
+            "Bearer sk-proj-YKwkZi3rUsnK3zFU4SAlT3BlbkFJfGXIb4Y6FJsr5D94ISrH",
+          "User-Agent": "chrome",
+        },
+        body: JSON.stringify({
+          prompt: `${inputRef.current.value}`,
+          n: 1,
+          size: "512x512",
+        }),
+      }
+    );
+    let data = await response.json();
+    console.log(data);
   };
-  const response = await fetch();
 
   return (
     <div className="ai-image-generator">
@@ -34,7 +54,14 @@ function ImageGenerator() {
           ref={inputRef}
           placeholder="Describe what you want to see"
         />
-        <div className="generate-btn">Generate</div>
+        <div
+          className="generate-btn"
+          onClick={() => {
+            imageGenerator();
+          }}
+        >
+          Generate
+        </div>
       </div>
     </div>
   );
