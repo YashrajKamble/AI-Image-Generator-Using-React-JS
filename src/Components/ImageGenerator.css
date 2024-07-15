@@ -3,15 +3,18 @@
   flex-direction: column;
   margin: auto;
   align-items: center;
-  margin-top: 80px;
-  margin-bottom: 20px;
-  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: -8px;
+  gap: 0px;
 }
-
 .header {
   font-weight: 500;
-  font-size: 45px;
-  padding-bottom: 30px;
+  font-size: 39px;
+  /* padding-bottom: 30px; */
+}
+
+.header div {
+  margin-bottom: 10px;
 }
 
 .header span {
@@ -31,7 +34,7 @@
 .search-box {
   display: flex;
   width: 1000px;
-  height: 95px;
+  height: 60px;
   justify-content: space-around;
   align-items: center;
   border-radius: 50px;
@@ -59,11 +62,15 @@
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 85px;
+  height: 50px;
   font-size: 20px;
   border-radius: 50px;
   background: #de1b89;
   cursor: pointer;
+}
+
+.loading {
+  width: 350px;
 }
 
 .loading-bar {
@@ -77,7 +84,7 @@
 }
 
 .loading-bar-full {
-  width: 400px;
+  width: 350px;
   height: 8px;
   background: #de1b89;
   transition: 15s;

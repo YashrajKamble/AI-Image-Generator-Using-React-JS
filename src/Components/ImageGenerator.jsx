@@ -38,11 +38,13 @@ function ImageGenerator() {
   return (
     <div className="ai-image-generator">
       <div className="header">
-        AI Image <span>Generator</span>
+        <div>
+          AI Image <span>Generator</span>
+        </div>
         <div className="img-loading">
           <div className="image">
             <img
-              style={{ width: "400px", height: "400px" }}
+              style={{ width: "350px", height: "350px" }}
               src={image_url === "/" ? default_image : image_url}
               alt=""
             />
